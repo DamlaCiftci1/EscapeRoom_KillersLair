@@ -7,14 +7,20 @@ public class indoorOpen : MonoBehaviour
     public float theDistance;
     public GameObject doorKey;
     public GameObject doorText;
-    public GameObject door; // Animator veya Animation component taþýyan obje
+    public GameObject door;
     public AudioSource doorSound;
 
-    private bool isOpen = false; // Kapý açýk mý?
+    public bool isLocked = false;           // Bu kapý kilitli mi?
+    public string requiredKeyID = "Key1";   // Açmak için gereken anahtar ID'si
+
+    private bool isOpen = false;            // Kapý açýk mý?
+
+    // Oyuncunun sahip olduðu anahtarlar
+    private static HashSet<string> playerKeys = new HashSet<string>();
 
     void Update()
     {
-        theDistance = PlayerRay.distanceFromTarget; // Oyuncuya olan mesafe
+        theDistance = PlayerRay.distanceFromTarget;
     }
 
     void OnMouseOver()
@@ -29,17 +35,23 @@ public class indoorOpen : MonoBehaviour
                 doorKey.SetActive(false);
                 doorText.SetActive(false);
 
-                if (!isOpen)
+                if (isLocked)
                 {
-                    door.GetComponent<Animation>().Play("Ýçe doðru kapý"); // Açýlma animasyonu
+                    if (playerKeys.Contains(requiredKeyID))
+                    {
+                        isLocked = false;
+                        ToggleDoor();
+                    }
+                    else
+                    {
+                        Debug.Log("Kapý kilitli. Anahtar gerekli: " + requiredKeyID);
+                        // Buraya UI uyarý ekleyebilirsin
+                    }
                 }
                 else
                 {
-                    door.GetComponent<Animation>().Play("DoorClose"); // Kapanma animasyonu
+                    ToggleDoor();
                 }
-
-                doorSound.Play();
-                isOpen = !isOpen; // Durumu tersine çevir
             }
         }
         else
@@ -53,5 +65,27 @@ public class indoorOpen : MonoBehaviour
     {
         doorKey.SetActive(false);
         doorText.SetActive(false);
+    }
+
+    void ToggleDoor()
+    {
+        if (!isOpen)
+        {
+            door.GetComponent<Animation>().Play("Ýçe doðru kapý");
+        }
+        else
+        {
+            door.GetComponent<Animation>().Play("DoorClose");
+        }
+
+        doorSound.Play();
+        isOpen = !isOpen;
+    }
+
+    // Anahtar toplayan script buradan çaðýracak
+    public static void AddKey(string keyID)
+    {
+        playerKeys.Add(keyID);
+        Debug.Log("Anahtar eklendi: " + keyID);
     }
 }
