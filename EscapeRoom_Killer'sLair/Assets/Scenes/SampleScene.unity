@@ -1967,7 +1967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: -29}
+  m_AnchoredPosition: {x: 76, y: -29}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282116943
@@ -2243,6 +2243,14 @@ PrefabInstance:
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2460879504577157143, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2460879504577157143, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 2665657990639411253, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2251,6 +2259,14 @@ PrefabInstance:
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3074197394432471473, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074197394432471473, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 3133293061921288946, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9997275
@@ -2275,38 +2291,110 @@ PrefabInstance:
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4239578347298078626, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239578347298078626, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6221365131708980495, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221365131708980495, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221365131708980495, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6221365132348232004, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221365132348232004, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221365132348232004, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6221365132406418048, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221365132406418048, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221365132406418048, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6221365132679531184, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221365132679531184, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221365132679531184, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6221365132979367247, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221365132979367247, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221365132979367247, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6221365133089553684, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221365133089553684, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221365133089553684, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 6380774348888065881, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6380774348888065881, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380774348888065881, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 7439814577607767677, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7439814577607767677, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439814577607767677, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 7521827668452108142, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -2411,10 +2499,26 @@ PrefabInstance:
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8929022447449687538, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929022447449687538, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     - target: {fileID: 9092691245430442382, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9092691245430442382, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092691245430442382, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 5968e2d3ddb03aa4b9c5456dcee3c716, type: 2}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
