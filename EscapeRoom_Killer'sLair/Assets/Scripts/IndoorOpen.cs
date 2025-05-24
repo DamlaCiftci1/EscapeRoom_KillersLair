@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorOpen : MonoBehaviour
+public class IndoorOpen : MonoBehaviour
 {
     public float theDistance;
     public GameObject doorKey;
@@ -22,7 +22,8 @@ public class DoorOpen : MonoBehaviour
             doorKey.SetActive(true);
             doorText.SetActive(true);
         }
-        else {
+        else
+        {
             doorKey.SetActive(false);
             doorText.SetActive(false);
         }
@@ -33,7 +34,7 @@ public class DoorOpen : MonoBehaviour
             {
                 doorKey.SetActive(false);
                 doorText.SetActive(false);
-                door.GetComponent<Animation>().Play("Door");
+                door.GetComponent<Animation>().Play("Ýçe doðru kapý");
                 doorSound.Play();
             }
         }
