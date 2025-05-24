@@ -743,6 +743,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &955935801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1508735390635915204, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+  m_PrefabInstance: {fileID: 1339856134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282116941
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +920,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2177557466357308515, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 955935801}
+    - target: {fileID: 2177557466357308515, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: doorKey
       value: 
       objectReference: {fileID: 223758201}
@@ -922,6 +931,10 @@ PrefabInstance:
       propertyPath: doorText
       value: 
       objectReference: {fileID: 1282116941}
+    - target: {fileID: 2177557466357308515, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      propertyPath: doorSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7521827668452108142, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

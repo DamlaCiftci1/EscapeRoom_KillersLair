@@ -17,8 +17,27 @@ public class DoorOpen : MonoBehaviour
 
     void OnMouseOver()
     {
-        doorKey.SetActive(true);
-        doorText.SetActive(true);
+        if (theDistance <= 2)
+        {
+            doorKey.SetActive(true);
+            doorText.SetActive(true);
+        }
+        else {
+            doorKey.SetActive(false);
+            doorText.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (theDistance <= 2)
+            {
+                doorKey.SetActive(false);
+                doorText.SetActive(false);
+                door.GetComponent<Animation>().Play("Door");
+                doorSound.Play();
+            }
+        }
+
     }
 
     void OnMouseExit()
