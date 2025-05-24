@@ -8,12 +8,14 @@ public class indoorOpen : MonoBehaviour
     public GameObject doorKey;
     public GameObject doorText;
     public GameObject door;
-    public AudioSource doorSound;
 
-    public bool isLocked = false;           // Bu kapý kilitli mi?
-    public string requiredKeyID = "Key1";   // Açmak için gereken anahtar ID'si
+    public AudioSource doorSound;   // Açýlma sesi (DoorOpen)
+    public AudioSource jiggleSound; // Kilit sesi (Jiggle)
 
-    private bool isOpen = false;            // Kapý açýk mý?
+    public bool isLocked = false;
+    public string requiredKeyID = "Key1";
+
+    private bool isOpen = false;
 
     // Oyuncunun sahip olduðu anahtarlar
     private static HashSet<string> playerKeys = new HashSet<string>();
@@ -45,7 +47,10 @@ public class indoorOpen : MonoBehaviour
                     else
                     {
                         Debug.Log("Kapý kilitli. Anahtar gerekli: " + requiredKeyID);
-                        // Buraya UI uyarý ekleyebilirsin
+                        if (jiggleSound != null)
+                        {
+                            jiggleSound.Play(); // Kilit sesi çal
+                        }
                     }
                 }
                 else
@@ -78,7 +83,11 @@ public class indoorOpen : MonoBehaviour
             door.GetComponent<Animation>().Play("DoorClose");
         }
 
-        doorSound.Play();
+        if (doorSound != null)
+        {
+            doorSound.Play(); // Açýlma/kapanma sesi
+        }
+
         isOpen = !isOpen;
     }
 

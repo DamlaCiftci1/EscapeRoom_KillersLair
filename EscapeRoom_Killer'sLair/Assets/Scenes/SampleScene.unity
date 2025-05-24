@@ -277,6 +277,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 198259764}
   doorSound: {fileID: 198259771}
+  jiggleSound: {fileID: 0}
   isLocked: 1
   requiredKeyID: Key1
 --- !u!1 &218627237 stripped
@@ -301,6 +302,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 218627237}
   doorSound: {fileID: 218627245}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!82 &218627245
@@ -792,6 +794,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 406925427}
   doorSound: {fileID: 406925434}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &410087039
@@ -1034,6 +1037,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 452613128}
   doorSound: {fileID: 452613134}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1001 &606811801
@@ -1297,6 +1301,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 631675968}
   doorSound: {fileID: 631675974}
+  jiggleSound: {fileID: 0}
   isLocked: 1
   requiredKeyID: Key2
 --- !u!1 &660429473 stripped
@@ -1418,6 +1423,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 660429473}
   doorSound: {fileID: 660429480}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &687120035 stripped
@@ -1539,6 +1545,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 687120035}
   doorSound: {fileID: 687120041}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &754653524 stripped
@@ -1660,6 +1667,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 754653524}
   doorSound: {fileID: 754653531}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &799320865 stripped
@@ -1960,8 +1968,106 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 955935801}
   doorSound: {fileID: 955935809}
+  jiggleSound: {fileID: 955935812}
   isLocked: 1
   requiredKeyID: Key3
+--- !u!82 &955935812
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955935801}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e043bc79e2b817a488ed7b4df90a2d53, type: 3}
+  m_Resource: {fileID: 8300000, guid: e043bc79e2b817a488ed7b4df90a2d53, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1248978607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
@@ -2120,6 +2226,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 1278120687}
   doorSound: {fileID: 1278120694}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &1282116941
@@ -2307,6 +2414,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 1316099853}
   doorSound: {fileID: 1316099861}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!82 &1316099861
@@ -2732,6 +2840,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1508735390635915204, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 955935810}
+    - targetCorrespondingSourceObject: {fileID: 1508735390635915204, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 955935812}
     - targetCorrespondingSourceObject: {fileID: 2019137722780714681, guid: 4d7c3441f36ad314eac2f1f4517aca7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1278120695}
@@ -2975,6 +3086,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 1532694697}
   doorSound: {fileID: 1532694704}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1001 &1554792745
@@ -3159,6 +3271,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 1673118739}
   doorSound: {fileID: 1673118746}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &1721999490 stripped
@@ -3307,6 +3420,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 1855279256}
   doorSound: {fileID: 1855279263}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!1 &1956416242 stripped
@@ -3331,6 +3445,7 @@ MonoBehaviour:
   doorText: {fileID: 1282116941}
   door: {fileID: 1956416242}
   doorSound: {fileID: 1956416249}
+  jiggleSound: {fileID: 0}
   isLocked: 0
   requiredKeyID: Key1
 --- !u!82 &1956416249
