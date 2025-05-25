@@ -8,17 +8,19 @@ public class EnemyAI : MonoBehaviour
 
     private NavMeshAgent agent;
     private Transform player;
+    private Animator animator; // Animator referansý
 
-    public float detectionRange = 6f; // Görüþ menzili
-    public float viewAngle = 90f;     // Toplam görüþ açýsý
-    public float verticalTolerance = 2f; // Kat farký toleransý
-    public GameObject gameOverPanel;     // Game Over paneli
+    public float detectionRange = 6f;         // Görüþ mesafesi
+    public float viewAngle = 90f;             // Görüþ açýsý
+    public float verticalTolerance = 2f;      // Yükseklik farký toleransý
+    public GameObject gameOverPanel;          // Game Over paneli
 
     private bool isChasing = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>(); // Animator'ý al
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         if (patrolPoints.Length > 0)
@@ -48,8 +50,8 @@ public class EnemyAI : MonoBehaviour
             isChasing = true;
             agent.SetDestination(player.position);
 
-            // Eðer oyuncuya çok yakýnsa -> Game Over
-            if (distanceToPlayer < 1.2f)
+            // Oyuncu çok yakýnsa: Game Over
+            if (distanceToPlayer < 0.4f)
             {
                 HandleGameOver();
             }
@@ -63,6 +65,12 @@ public class EnemyAI : MonoBehaviour
             }
 
             Patrol();
+        }
+
+        // Yürüme animasyonu kontrolü
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", agent.velocity.magnitude);
         }
     }
 
@@ -83,6 +91,6 @@ public class EnemyAI : MonoBehaviour
         }
 
         agent.isStopped = true;
-        Time.timeScale = 0f; // Oyunu durdur
+        Time.timeScale = 0f;
     }
 }
