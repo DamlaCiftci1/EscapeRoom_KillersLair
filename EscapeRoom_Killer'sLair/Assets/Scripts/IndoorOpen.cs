@@ -20,6 +20,15 @@ public class indoorOpen : MonoBehaviour
     // Oyuncunun sahip olduðu anahtarlar
     private static HashSet<string> playerKeys = new HashSet<string>();
 
+    // You Win paneli (Inspector'dan atanacak)
+    public GameObject youWinPanel;
+
+    void Start()
+    {
+        if (youWinPanel != null)
+            youWinPanel.SetActive(false); // Baþta kapalý olsun
+    }
+
     void Update()
     {
         theDistance = PlayerRay.distanceFromTarget;
@@ -29,6 +38,10 @@ public class indoorOpen : MonoBehaviour
     {
         if (theDistance <= 2f)
         {
+            // Eðer YouWin aktifse hiçbir þey gösterme
+            if (youWinPanel != null && youWinPanel.activeSelf)
+                return;
+
             doorKey.SetActive(true);
             doorText.SetActive(true);
 
@@ -43,6 +56,7 @@ public class indoorOpen : MonoBehaviour
                     {
                         isLocked = false;
                         ToggleDoor();
+                        CheckWinCondition();
                     }
                     else
                     {
@@ -56,6 +70,7 @@ public class indoorOpen : MonoBehaviour
                 else
                 {
                     ToggleDoor();
+                    CheckWinCondition();
                 }
             }
         }
@@ -65,6 +80,7 @@ public class indoorOpen : MonoBehaviour
             doorText.SetActive(false);
         }
     }
+
 
     void OnMouseExit()
     {
@@ -96,5 +112,21 @@ public class indoorOpen : MonoBehaviour
     {
         playerKeys.Add(keyID);
         Debug.Log("Anahtar eklendi: " + keyID);
+    }
+
+    // Oyun bitirme koþulu
+    void CheckWinCondition()
+    {
+        if (requiredKeyID == "Key3") // Son kapýnýn anahtarý (ID 3)
+        {
+            Debug.Log("You Win! Oyun bitti.");
+
+            if (youWinPanel != null)
+            {
+                youWinPanel.SetActive(true);
+            }
+
+            Time.timeScale = 0f; // Oyunu durdur
+        }
     }
 }

@@ -10,8 +10,9 @@ public class EnemyAI : MonoBehaviour
     private Transform player;
 
     public float detectionRange = 6f; // Görüþ menzili
-    public float viewAngle = 90f;     // Toplam görüþ açýsý (örnek: 90 = 45° sað, 45° sol)
-    public float verticalTolerance = 2f; // Farklý katta olup olmadýðýný kontrol etmek için yükseklik farký toleransý
+    public float viewAngle = 90f;     // Toplam görüþ açýsý
+    public float verticalTolerance = 2f; // Kat farký toleransý
+    public GameObject gameOverPanel;     // Game Over paneli
 
     private bool isChasing = false;
 
@@ -23,6 +24,11 @@ public class EnemyAI : MonoBehaviour
         if (patrolPoints.Length > 0)
         {
             agent.SetDestination(patrolPoints[currentPoint].position);
+        }
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
         }
     }
 
@@ -41,6 +47,12 @@ public class EnemyAI : MonoBehaviour
         {
             isChasing = true;
             agent.SetDestination(player.position);
+
+            // Eðer oyuncuya çok yakýnsa -> Game Over
+            if (distanceToPlayer < 1.2f)
+            {
+                HandleGameOver();
+            }
         }
         else
         {
@@ -61,5 +73,16 @@ public class EnemyAI : MonoBehaviour
             currentPoint = (currentPoint + 1) % patrolPoints.Length;
             agent.SetDestination(patrolPoints[currentPoint].position);
         }
+    }
+
+    void HandleGameOver()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+
+        agent.isStopped = true;
+        Time.timeScale = 0f; // Oyunu durdur
     }
 }
