@@ -8,19 +8,19 @@ public class EnemyAI : MonoBehaviour
 
     private NavMeshAgent agent;
     private Transform player;
-    private Animator animator; // Animator referansý
+    private Animator animator;
 
-    public float detectionRange = 6f;         // Görüþ mesafesi
-    public float viewAngle = 90f;             // Görüþ açýsý
-    public float verticalTolerance = 2f;      // Yükseklik farký toleransý
-    public GameObject gameOverPanel;          // Game Over paneli
+    public float detectionRange = 6f;
+    public float viewAngle = 90f;
+    public float verticalTolerance = 2f;
+    public GameObject gameOverPanel;
 
     private bool isChasing = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>(); // Animator'ý al
+        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         if (patrolPoints.Length > 0)
@@ -37,20 +37,29 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = (player.position - transform.position).normalized;
-        float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
         float heightDifference = Mathf.Abs(transform.position.y - player.position.y);
 
+        // Görüþ açýsý kontrolü
+        Vector3 rayStartPos = transform.position + Vector3.up * 0.9f; // Daha alçaktan baþlat
+        Vector3 directionToPlayer = (player.position + Vector3.up * 0.3f - rayStartPos).normalized;
+
+        float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
+
+        // Ray ile oyuncuyu görebiliyor mu kontrol et
         bool isPlayerVisible = distanceToPlayer < detectionRange &&
                                angleToPlayer < viewAngle / 2f &&
-                               heightDifference < verticalTolerance;
+                               heightDifference < verticalTolerance &&
+                               Physics.Raycast(rayStartPos, directionToPlayer, out RaycastHit hit, detectionRange) &&
+                               hit.collider.CompareTag("Player");
+
+        // Debug çizgisi (scene'de görmek istersen)
+        Debug.DrawRay(rayStartPos, directionToPlayer * detectionRange, Color.red);
 
         if (isPlayerVisible)
         {
             isChasing = true;
             agent.SetDestination(player.position);
 
-            // Oyuncu çok yakýnsa: Game Over
             if (distanceToPlayer < 0.4f)
             {
                 HandleGameOver();
@@ -67,7 +76,7 @@ public class EnemyAI : MonoBehaviour
             Patrol();
         }
 
-        // Yürüme animasyonu kontrolü
+        // Animasyon kontrolü
         if (animator != null)
         {
             animator.SetFloat("Speed", agent.velocity.magnitude);
