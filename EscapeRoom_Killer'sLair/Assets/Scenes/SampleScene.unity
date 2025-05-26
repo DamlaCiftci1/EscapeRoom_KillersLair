@@ -279,7 +279,7 @@ MonoBehaviour:
   doorSound: {fileID: 198259771}
   jiggleSound: {fileID: 198259778}
   isLocked: 1
-  requiredKeyID: Key1
+  requiredKeyID: Key5
   youWinPanel: {fileID: 0}
 --- !u!82 &198259778
 AudioSource:
@@ -1929,7 +1929,7 @@ MonoBehaviour:
   doorSound: {fileID: 631675974}
   jiggleSound: {fileID: 631675981}
   isLocked: 1
-  requiredKeyID: Key2
+  requiredKeyID: Key3
   youWinPanel: {fileID: 0}
 --- !u!82 &631675981
 AudioSource:
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   doorSound: {fileID: 660429487}
   jiggleSound: {fileID: 660429480}
   isLocked: 1
-  requiredKeyID: Key4
+  requiredKeyID: Key1
   youWinPanel: {fileID: 0}
 --- !u!82 &660429487
 AudioSource:
@@ -3000,7 +3000,7 @@ MonoBehaviour:
   doorSound: {fileID: 955935809}
   jiggleSound: {fileID: 955935812}
   isLocked: 1
-  requiredKeyID: Key3
+  requiredKeyID: Key4
   youWinPanel: {fileID: 1244517747}
 --- !u!82 &955935812
 AudioSource:
@@ -4944,8 +4944,8 @@ MonoBehaviour:
   door: {fileID: 1673118739}
   doorSound: {fileID: 1673118746}
   jiggleSound: {fileID: 1673118746}
-  isLocked: 1
-  requiredKeyID: Key5
+  isLocked: 0
+  requiredKeyID: Key2
   youWinPanel: {fileID: 0}
 --- !u!82 &1673118753
 AudioSource:
