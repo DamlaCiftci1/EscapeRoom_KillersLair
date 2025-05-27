@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class indoorOpen : MonoBehaviour
@@ -16,9 +15,6 @@ public class indoorOpen : MonoBehaviour
     public string requiredKeyID = "Key1";
 
     private bool isOpen = false;
-
-    // Oyuncunun sahip olduðu anahtarlar
-    private static HashSet<string> playerKeys = new HashSet<string>();
 
     // You Win paneli (Inspector'dan atanacak)
     public GameObject youWinPanel;
@@ -52,7 +48,8 @@ public class indoorOpen : MonoBehaviour
 
                 if (isLocked)
                 {
-                    if (playerKeys.Contains(requiredKeyID))
+                    // >>> Burayý güncelledik
+                    if (PlayerInventory.Instance != null && PlayerInventory.Instance.HasKey(requiredKeyID))
                     {
                         isLocked = false;
                         ToggleDoor();
@@ -81,7 +78,6 @@ public class indoorOpen : MonoBehaviour
         }
     }
 
-
     void OnMouseExit()
     {
         doorKey.SetActive(false);
@@ -107,17 +103,12 @@ public class indoorOpen : MonoBehaviour
         isOpen = !isOpen;
     }
 
-    // Anahtar toplayan script buradan çaðýracak
-    public static void AddKey(string keyID)
-    {
-        playerKeys.Add(keyID);
-        Debug.Log("Anahtar eklendi: " + keyID);
-    }
+    // >>> Bu fonksiyon artýk kullanýlmýyor. Ýstersen silebilirsin.
+    // public static void AddKey(string keyID) {}
 
-    // Oyun bitirme koþulu
     void CheckWinCondition()
     {
-        if (requiredKeyID == "Key3") // Son kapýnýn anahtarý (ID 3)
+        if (requiredKeyID == "Key4") // Son kapýnýn anahtarý (örnek)
         {
             Debug.Log("You Win! Oyun bitti.");
 

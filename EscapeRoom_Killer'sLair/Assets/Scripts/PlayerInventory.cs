@@ -3,7 +3,16 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private HashSet<string> keys = new HashSet<string>();
+    public static PlayerInventory Instance;
+    private List<string> keys = new List<string>();
+
+    public InventoryUI inventoryUI;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     public void AddKey(string keyID)
     {
@@ -11,6 +20,7 @@ public class PlayerInventory : MonoBehaviour
         {
             keys.Add(keyID);
             Debug.Log("Anahtar eklendi: " + keyID);
+            inventoryUI.UpdateInventory(keys);
         }
     }
 
@@ -19,4 +29,3 @@ public class PlayerInventory : MonoBehaviour
         return keys.Contains(keyID);
     }
 }
-

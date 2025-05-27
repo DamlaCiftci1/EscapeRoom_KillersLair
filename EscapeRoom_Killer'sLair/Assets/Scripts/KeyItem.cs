@@ -8,8 +8,7 @@ public class KeyItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            indoorOpen.AddKey(keyID);
-            Debug.Log("Anahtar alýndý: " + keyID);
+            PlayerInventory.Instance.AddKey(keyID);
             Destroy(gameObject);
         }
     }

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e752e064ca185ae41b0bf90b8c1604c8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 26142
+  packageName: Horror Weapon Set 1
+  packageVersion: Initial
+  assetPath: Assets/HorrorWeaponSet1/Models/DeathSword.prefab
+  uploadId: 43558
