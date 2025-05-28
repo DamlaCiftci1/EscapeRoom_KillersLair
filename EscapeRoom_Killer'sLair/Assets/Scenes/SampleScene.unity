@@ -848,8 +848,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278387461
-  m_fontColor: {r: 0.01886791, g: 0.012922738, b: 0.012922738, a: 1}
+    rgba: 4285822068
+  m_fontColor: {r: 0.4566037, g: 0.4566037, b: 0.4566037, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1605,8 +1605,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278387461
-  m_fontColor: {r: 0.01886791, g: 0.012922738, b: 0.012922738, a: 1}
+    rgba: 4285822068
+  m_fontColor: {r: 0.45490196, g: 0.45490196, b: 0.45490196, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3490,7 +3490,7 @@ MonoBehaviour:
   continueText: {fileID: 508767273}
   backgroundPanel: {fileID: 552519641}
   fullText: "You\u2019ve been taken\u2026\nTo escape the killer\u2019s lair, you
-    must collect 6 hidden keys and unlock the exit door.\nBut be careful \u2014 every
+    must collect 5 hidden keys and unlock the exit door.\nBut be careful \u2014 every
     step you take is being watched.\nCollect the keys, stay in the shadows, and don\u2019t
     get caught.\nIf the killer finds you\u2026 it\u2019s already too late."
   typingSpeed: 0.05
